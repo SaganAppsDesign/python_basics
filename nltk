@@ -1,0 +1,28 @@
+import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+'''
+# Carga el modelo del analizador de sentimientos
+nltk.download('vader_lexicon')
+sia = SentimentIntensityAnalyzer()
+
+# Analiza el sentimiento de un texto
+text = "La vida es una puta mierda"
+scores = sia.polarity_scores(text)
+
+# Imprime los puntajes del análisis de sentimientos
+for key, value in scores.items():
+    print(f'{key}: {value}')
+'''
+
+# Descargar los recursos necesarios
+nltk.download('punkt')
+
+# Texto de ejemplo
+texto = "La inteligencia artificial (IA) es la rama de la informática que se enfoca en crear máquinas capaces de realizar tareas que, hasta ahora, solo podían ser realizadas por seres humanos."
+
+# Tokenización del texto
+tokens = nltk.word_tokenize(texto)
+
+# Imprimir los tokens
+print(tokens)
